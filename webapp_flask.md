@@ -1,6 +1,9 @@
 # Building a Web App with Flask
 Flask is a microframework packed with tools to help build simple, quick web applications. We'll also be using Jinja2, a template engine, to create the bulk of the html content for our application. This tutorial will cover creating a site, deploying it, and adding interactive Bokeh graphics. We'll alternate between using the command line, editing code in a text editor (VSCode and Sublime are great options), and interacting with our application in a web browser (Chrome).
 
+## Development Notes
+If you are using a Window's PC then when you see "export command" use "set command". Additionally, if you are executing the code from the normal command prompt, the computer needs to have Python registered in it's environment in order for code to work. More easily, running code from the Anaconda Command Prompt (if installed) will work without issue - plus Anaconda comes with many essential and common Python libraries.
+
 ## Installating Packages
 Luckily, Flask comes prepackaged with Jinja2, so we only have one bulk-package to install. Install Flask via the command line:
 `$ pip install flask`
@@ -40,7 +43,7 @@ Okay, the basics of our package are set! Now, back to our actual _application_. 
 $ cd ..
 $ touch flask_app.py
 ```
-Open that new file, add the line `from app import app`, and ta-da: your app is ready to go! Since we'll be running it locally, we'll want to run our application in __debug (development)__ mode. Tell Flask to run your application in a development environment by running `export FLASK_ENV=development`. Now, jump back over to your terminal and run `export FLASK_APP=my_app.py` to tell Flask how to import your application. Then, run `flask run` - you should see something like this:
+Open that new file, add the line `from app import app`, and ta-da: your app is ready to go! Since we'll be running it locally, we'll want to run our application in __debug (development)__ mode. Now jump back over to your terminal and tell Flask to run your application in a development environment by running `export FLASK_ENV=development`. Next, run `export FLASK_APP=my_app.py` to tell Flask how to import your application. Then, run `flask run` - you should see something like this:
 ```
 [* Serving Flask app "app" (lazy loading)
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)]( * Serving Flask app "flask_app.py" (lazy loading)
@@ -53,6 +56,7 @@ Open that new file, add the line `from app import app`, and ta-da: your app is r
 )
 ```
 In your web browser, navigate to <http://localhost:5000/>. You should see a white page with "Hello World! Welcome home." in black text in the top right corner.
+
 #### Check Point
 Before continuing, make sure that your directory has the following structure:
 ```
